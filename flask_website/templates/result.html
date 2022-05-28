@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  <title>Result Page</title>
+{% endblock %}
+
+
+{% block body %}
+  <div class="container-fluid">
+    <div class="card w-50 mx-auto mt-3 text-center">
+      <div class="card-header">
+        Report Card
+      </div>
+      <div class="card-body">
+        {% for key, value in disp.items() %}
+        {{key}} - {{value}}<br>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

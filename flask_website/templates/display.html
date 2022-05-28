@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  <title>Display Page</title>
+{% endblock %}
+
+
+{% block body %}
+  <div class="container-fluid">
+    <h2 class="text-center mt-5">Information</h2>
+    <table class="table table-borderd w-25 mx-auto mt-3 text-center">
+      <!-- for loop in JINJA -->
+      <!-- key and value are variables therefore you can change it to other variable names -->
+      {% for key, value in disp.items() %}
+        <tr>
+          <!-- <td>ここに2つのcurly bracketsでkeyを入れてもOK</td> -->
+          <!-- to display the value of variables in jinja
+            you only have to put the variable name inside double carly brackets
+          -->
+          <td>{{value}}</td>
+        </tr>
+
+      {% endfor %}
+
+    </table>
+  </div>
+{% endblock %}

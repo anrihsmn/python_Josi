@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  <title>Student Page</title>
+{% endblock %}
+
+
+{% block body %}
+  <div class="card w-50 mx-auto mt-5">
+    <div class="card-header">
+      <h3>STUDENT RESISTRATION</h3>
+    </div>
+    <div class="card-body">
+      <form action="/display" method="post">
+        <input type="text" class="form-control mb-2" name="fname" placeholder="First Name">
+        <input type="text" class="form-control mb-2" name="lname" placeholder="Last Name">
+        <input type="email" class="form-control mb-2" name="email" placeholder="Email Address">
+        Gender:
+        <input type="radio" name="gender" id="" value="male">Male
+        <!-- <label for="male">Male</label> 上のMaleを消してlabelタグでもokay -->
+        <input type="radio" name="gender" id="" value="female">Famale<br>
+        <!-- <label for="female">Female</label> -->
+        <select name="country" id="" class="form-control mb-2">
+          <option value="USA">USA</option>
+          <option value="CHINA">China</option>
+          <option value="JAPAN">Japan</option>
+          <option value="AUSTRALIA">Australia</option>
+          <option value="UK">Uk</option>
+        </select>
+        <input type="submit" value="Submit" class="btn btn-success w-100">
+
+      </form>
+
+    </div>
+
+  </div>
+{% endblock %}
